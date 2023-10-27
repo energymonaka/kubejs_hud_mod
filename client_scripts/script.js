@@ -13,7 +13,8 @@ onEvent("client.tick", (event) => {
       alignX: "center",
       alignY: "bottom",
       draw: "ingame",
-      color: "#575757",
+      color: "#BCBCBC",
+      shadow: true,
     },
   });
 });
