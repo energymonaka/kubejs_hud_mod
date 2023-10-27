@@ -1,5 +1,4 @@
 onEvent("client.tick", (event) => {
-  let coordinates_y = event.player.creativeMode ? -22 : -38;
   event.player.paint({
     coordinates: {
       type: "text",
@@ -10,7 +9,7 @@ onEvent("client.tick", (event) => {
 			`,
       scale: 1.2,
       x: 0,
-      y: coordinates_y,
+      y: event.player.creativeMode ? -22 : -38,
       alignX: "center",
       alignY: "bottom",
       draw: "ingame",
