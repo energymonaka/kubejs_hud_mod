@@ -13,14 +13,14 @@ onEvent("player.logged_in", (event) => {
   });
 });
 onEvent("client.tick", (event) => {
-  const xyz_text = `
+  const player_coordinates = `
   ${Math.round(event.player.x)}
   ${Math.round(event.player.y)}
   ${Math.round(event.player.z)}
    `;
   event.player.paint({
     client_xyz: {
-      text: xyz_text,
+      text: player_coordinates,
       y: event.player.creativeMode ? -22 : -38,
     },
   });
