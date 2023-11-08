@@ -9,7 +9,7 @@ onEvent("player.logged_in", (event) => {
       alignX: "center",
       alignY: "bottom",
       draw: "ingame",
-      color: "#BCBCBC",
+      color: "#CCCCCC",
       shadow: true,
     },
   });
