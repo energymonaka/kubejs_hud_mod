@@ -4,6 +4,7 @@ onEvent("player.logged_in", (event) => {
       type: "text",
       scale: 1.2,
       x: 0,
+      y: -38,
       alignX: "center",
       alignY: "bottom",
       draw: "ingame",
@@ -12,12 +13,14 @@ onEvent("player.logged_in", (event) => {
     },
   });
 });
+
 onEvent("client.tick", (event) => {
-  const player_coordinates = `
+  let player_coordinates = `
   ${Math.round(event.player.x)}
   ${Math.round(event.player.y)}
   ${Math.round(event.player.z)}
    `;
+
   event.player.paint({
     client_xyz: {
       text: player_coordinates,
